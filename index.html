@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>UI Design Questionnaire</title>
+    <link href="Resources/CSS/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrap">
+        <div class="titleblock">
+            <div class="titleblock-inner">
+                <h1>Evaluating Web Design</h1>
+                <p><i>Please answer some questions about the following web page...</i></p>
+            </div>
+        </div>
+        <br />
+        <div class="main">
+            <div class="info">
+                <div id="sitelink">
+                    <a href="http://www.pontiacheaven.org/">PontiacHeaven.com</a>
+                </div>
+                <div class="gallery">
+                    <div class="imgContainer">
+                        <a href="http://www.pontiacheaven.org/">
+                            <img src="/Resources/Images/main_page.png" />
+                        </a> 
+                        <br />
+                        <p>Main Page</p>
+                    </div>
+                    <div class="imgContainer">
+                        <a href="http://www.pontiacheaven.org/race_cars.html">
+                            <img src="/Resources/Images/race_cars.png" />
+                        </a>
+                        <br />
+                        <p>Subcategory</p>
+                    </div>
+                    <div class="imgContainer">
+                        <a href="http://www.pontiacheaven.org/Pontiac_History.html">
+                            <img src="/Resources/Images/pontiac_history.png" />
+                        </a>
+                        <br />
+                        <p>History</p>
+                    </div>
+                </div>
+            </div>
+            <br style="clear:left;" />
+            <div class="questionnaire">
+                <form id="questions">
+                    <table class="questionTable">
+                        <tr class="questioncell" id="question1">
+                            <td>
+                                <label for="q1">Your Full Name: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="q1" />
+                            </td>
+                        </tr>
+                        <tr class="questioncell" id="question2">
+                            <td>
+                                <label for="q2">My favourite aspect is: </label>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><input type="radio" name="q2radios" id="q2radiobutton1" value="option1" /> <label for="q2radiobutton1">The typesetting/font</label> </li>
+                                    <li><input type="radio" name="q2radios" id="q2radiobutton2" value="option2" /> <label for="q2radiobutton1">The colour palette</label> </li>
+                                    <li><input type="radio" name="q2radios" id="q2radiobutton3" value="option3" /> <label for="q2radiobutton1">The image wrapping/clip art</label> </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="questioncell" id="question3">
+                            <td>
+                                <label for="q3">I am a... </label>
+                            </td>
+                            <td>
+                                <select id="q3">
+                                    <option value="result1">Student</option>
+                                    <option value="result2">Teacher</option>
+                                    <option value="result3">Graphic Designer</option>
+                                    <option value="result4">Automotive Enthusiast</option>
+                                    <option value="result5">Apprehensive Onlooker</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="questioncell" id="question4">
+                            <td>
+                                <label for="q1">This page... </label>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li> <input type="checkbox" id="q4checkbox1" /> <label for="q4checkbox1">Offends my senses</label> </li>
+                                    <li> <input type="checkbox" id="q4checkbox2" /> <label for="q4checkbox1">Gave me a nosebleed</label> </li>
+                                    <li> <input type="checkbox" id="q4checkbox3" /> <label for="q4checkbox1">Caused partial blindness</label> </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr class="questioncell" id="question5">
+                            <td>
+                                <label for="q5">To what degree do you find the site aesthetically pleasing? </label>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="q5radios" id="q5radiobutton5" value="5" />
+                                        <label for="q5radiobutton5">Very</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q5radios" id="q5radiobutton4" value="4" />
+                                        <label for="q5radiobutton4">Somewhat</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q5radios" id="q5radiobutton3" value="3" />
+                                        <label for="q5radiobutton3">Ambivalent</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q5radios" id="q5radiobutton2" value="2" />
+                                        <label for="q5radiobutton2">Barely</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q5radios" id="q5radiobutton1" value="1" />
+                                        <label for="q5radiobutton1">Not At All</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="questioncell" id="question6">
+                            <td>
+                                <label for="q6">Additional Comments: </label>
+                            </td>
+                            <td>
+                                <textarea id="q6"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <input type="submit" class="postButton" />
+                    <input type="reset" class="postButton"/>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            <footer>
+                <p>Website designed by Aron Arany (2020)</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
