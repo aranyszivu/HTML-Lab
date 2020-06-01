@@ -1,4 +1,4 @@
-﻿// This function is called when any of the tab is clicked
+// This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 
 function openInfo(evt, tabName) {
@@ -128,17 +128,13 @@ function selectedItems() {
 	productTable.appendChild(tHeader);
 	c.appendChild(productTable);
 
-	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
 	para.appendChild(document.createElement("br"));
+	var j = 0;
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
-			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
-
+			j++;
 			var newRow = document.createElement("tr");
-			newRow.id = (i % 2 == 1) ? "oddRow" : "evenRow";
+			newRow.id = (j % 2 == 1) ? "oddRow" : "evenRow";
 			var productName = document.createElement("td");
 			productName.innerText = ele[i].value;
 			newRow.appendChild(productName);
