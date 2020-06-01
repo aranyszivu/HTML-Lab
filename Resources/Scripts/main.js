@@ -133,7 +133,7 @@ function selectedItems() {
 		if (ele[i].checked) {
 			chosenProducts.push(ele[i].value);
 			var newRow = document.createElement("tr");
-			newRow.id = (j++ % 2 == 1) ? "oddRow" : "evenRow";
+			newRow.id = (j++ % 2 == 1) ? "evenRow" : "oddRow";
 			var productName = document.createElement("td");
 			productName.innerText = ele[i].value;
 			newRow.appendChild(productName);
