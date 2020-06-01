@@ -128,13 +128,11 @@ function selectedItems() {
 	productTable.appendChild(tHeader);
 	c.appendChild(productTable);
 
-	para.appendChild(document.createElement("br"));
 	var j = 1;
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked) {
-			j++;
 			var newRow = document.createElement("tr");
-			newRow.id = (j % 2 == 1) ? "oddRow" : "evenRow";
+			newRow.id = (j++ % 2 == 1) ? "oddRow" : "evenRow";
 			var productName = document.createElement("td");
 			productName.innerText = ele[i].value;
 			newRow.appendChild(productName);
