@@ -129,7 +129,7 @@ function selectedItems() {
 	c.appendChild(productTable);
 
 	para.appendChild(document.createElement("br"));
-	var j = 0;
+	var j = 1;
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked) {
 			j++;
