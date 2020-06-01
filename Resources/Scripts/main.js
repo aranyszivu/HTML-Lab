@@ -131,6 +131,7 @@ function selectedItems() {
 	var j = 1;
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked) {
+			chosenProducts.push(ele[i].value);
 			var newRow = document.createElement("tr");
 			newRow.id = (j++ % 2 == 1) ? "oddRow" : "evenRow";
 			var productName = document.createElement("td");
