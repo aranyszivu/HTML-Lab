@@ -2,16 +2,98 @@
 <html>
 <head>
     <! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
-    <link href="Resources/Styles/style.css" rel="stylesheet" type="text/css">
+    <link href="Resources/Styles/style-lab3.css" rel="stylesheet" type="text/css">
     <title>Lab 3</title>
 </head>
 
 <body>
     <div id="pageContent">
-        <p>Under Construction! Will be ready by 2020.06.09.</p>
+        <div class="header">
+            <img id="logo" src="Resources/Images/cartlogo.png" />
+            <p id="mainTitle">Miscellaneous Local Grocer's (Lab 3)</p>
+        </div>
+        <!-- Tab links, each one with an onclick event associated with it -->
+        <div class="tab">
+            <button id="btnClient" class="tablinks"  disabled>Set Info</button>
+            <button id="btnProducts" class="tablinks"  disabled>Choose Products</button>
+            <button id="btnCart" class="tablinks"  disabled>View Cart</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="Client" class="tabcontent">
+            <h3>Before You Begin, Tell Us About You!</h3>
+            <p>I would like to see...</p>
+            <div class="selectDiv">
+                <input type="checkbox" id="prefVeg" name="prefVeg" value="Vegetarian" onchange="populateListProductChoices('displayProduct')" />
+                <label for="prefVeg">Vegetarian items only</label> <br />
+                <input type="checkbox" id="prefGlut" name="prefGlut" value="GlutenFree" onchange="populateListProductChoices('displayProduct')" />
+                <label for="prefGlut">Gluten-Free items only</label> <br />
+            </div>
+            <p>If available, choose...</p>
+            <div class="selectDiv">
+                <input type="radio" id="organicPrefYes" name="organicPref" value="Y" onchange="changeOrganic()" />
+                <label for="organicPrefYes">Organic Products</label>
+                <br />
+                <input type="radio" id="organicPrefNo" name="organicPref" value="N" checked="checked" onchange="changeOrganic()" />
+                <label for="organicPrefNo">No Preference</label>
+            </div>
+            <div class="navButtonWrapper">
+                <input type="button" class="btnNext" onclick="openInfo('Products')" value="Next" />
+            </div>
+        </div>
+
+		<div id="Products" class="tabcontent">
+			<h3>Product Catalogue</h3>
+			<p id="restrictions"></p>
+            <div class="productPanelWrapper">
+                <div id="filterWrapper">
+                    <p>Show...</p>
+                    <input type="checkbox" name="produceFilter" id="fltrFruit" class="fltrBox" value="fruit" onclick="filterItems()" checked />
+                    <label for="fltrFruit">Fruit</label>
+                    <input type="checkbox" name="produceFilter" id="fltrVeg" class="fltrBox" value="vegetables" onclick="filterItems()" checked />
+                    <label for="fltrVeg">Vegetables</label>
+                    <input type="checkbox" name="produceFilter" id="fltrGrain" class="fltrBox" value="grains" onclick="filterItems()" checked />
+                    <label for="fltrGrain">Baked Goods & Grains</label>
+                    <br />
+                    <input type="checkbox" name="produceFilter" id="fltrMeat" class="fltrBox" value="meat" onclick="filterItems()" checked />
+                    <label for="fltrMeat">Meat</label>
+                    <input type="checkbox" name="produceFilter" id="fltrFrozen" class="fltrBox" value="frozen" onclick="filterItems()" checked />
+                    <label for="fltrFrozen">Frozen Foods</label>
+                    <input type="checkbox" name="produceFilter" id="fltrCooking" class="fltrBox" value="cooking" onclick="filterItems()" checked />
+                    <label for="fltrCooking">Cooking Supplies</label>
+                </div>
+                <div id="displayProduct" ></div>
+            </div>
+			<button id="addCart" type="button" class="block" onclick="selectedItems()">
+				Add Selected Items to Cart
+			</button>
+			<br />
+			<div class="navButtonWrapper">
+				<input type="button" class="btnPrev" onclick="openInfo('Client')" value="Back to Client Info" />
+				<input type="button" class="btnNext" onclick="openInfo('Cart')" value="Check Out" />
+			</div>
+		</div>
+
+        <div id="Cart" class="tabcontent">
+            <h3>Cart Details</h3>
+            <p id="prefOrganic"></p>
+            <p>Items currently in cart: </p>
+            <div id="displayCart"></div>
+            <div class="navButtonWrapper">
+                <input type="button" class="btnPrev" onclick="openInfo('Products')" value="Back to Product List" />
+            </div>
+        </div>
     </div>
-    <script src="Resources/Scripts/groceries.js"></script>
-    <script src="Resources/Scripts/main.js"></script>
+    <div id="footer">
+        <p>Website for SEG3125 by Aron Arany</p>
+    </div>
+
+    <script src="Resources/Scripts/groceries-lab3.js"></script>
+    <script src="Resources/Scripts/main-lab3.js"></script>
+    <script>
+		openInfo('Client');
+		populateListProductChoices('displayProduct');
+    </script>
 
 </body>
 </html>
