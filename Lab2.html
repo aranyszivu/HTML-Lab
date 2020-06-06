@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="Resources/Styles/style.css" rel="stylesheet" type="text/css">
+	<title>Lab 2</title>
+</head>
+
+<body>
+	<div id="pageContent">
+		<div class="header">
+			<img id="logo" src="Resources/Images/cartlogo.png" />
+			<p id="mainTitle">Miscellaneous Local Grocer's (Lab 2)</p>
+		</div>
+		<!-- Tab links, each one with an onclick event associated with it -->
+		<div class="tab">
+			<button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+			<button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+			<button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+		</div>
+
+		<!-- Tab content -->
+		<div id="Client" class="tabcontent">
+			<h3>Client Information</h3>
+			<p>Tell us a bit about you.</p>
+			Choose a Category:
+			<div class="selectDiv">
+				<input type="checkbox" id="prefVeg" name="prefVeg" value="Vegetarian" onchange="populateListProductChoices('displayProduct')" />
+				<label for="prefVeg">Vegetarian</label> <br />
+				<input type="checkbox" id="prefGlut" name="prefGlut" value="GlutenFree" onchange="populateListProductChoices('displayProduct')" />
+				<label for="prefGlut">Gluten-Free</label> <br />
+			</div>
+			<p>On item selection, choose...</p>
+			<div class="selectDiv">
+				<input type="radio" id="organicPrefYes" name="organicPref" value="Y" onchange="changeOrganic()" />
+				<label for="organicPrefYes">Organic Products</label>
+				<br />
+				<input type="radio" id="organicPrefNo" name="organicPref" value="N"  checked="checked" onchange="changeOrganic()" />
+				<label for="organicPrefNo">No Preference</label>
+			</div>
+
+		</div>
+
+		<div id="Products" class="tabcontent">
+			<h3>Your targeted products</h3>
+			<p>We preselected products based on your restrictions.</p>
+			Choose items to buy:
+			<div id="displayProduct"></div>
+			<button id="addCart" type="button" class="block" onclick="selectedItems()">
+				Add selected items to cart.
+			</button>
+		</div>
+
+		<div id="Cart" class="tabcontent">
+			<h3>Cart</h3>
+			<p id="prefOrganic"></p>
+			<p>Here is your cart.</p>
+			<div id="displayCart"></div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Website for SEG3125 by Aron Arany</p>
+	</div>
+
+	<script src="Resources/Scripts/groceries.js"></script>
+	<script src="Resources/Scripts/main.js"></script>
+
+</body>
+</html>
