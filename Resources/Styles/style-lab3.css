@@ -111,6 +111,11 @@
     background-color: #ccc;
 }
 
+.chkBoxWrapper {
+    text-align:center;
+    width:100px;
+}
+
 /* Miscellaneous */
 .navButtonWrapper {
     border-top: 1px solid #ccc;
@@ -128,4 +133,5 @@
 #filterWrapper {
     padding: 10px;
     border: 1px solid #ccc;
+    margin-bottom:10px;
 }
