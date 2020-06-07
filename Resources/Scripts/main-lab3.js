@@ -95,12 +95,25 @@ function populateListProductChoices(slct2) {
 		productPrice.innerText = product.price;
 		newRow.appendChild(productPrice);
 
+		//Add (hidden) checkbox
 		var checkBoxWrapper = document.createElement("td");
+		checkBoxWrapper.className = "chkBoxWrapper";
 		var checkBox = document.createElement("input");
 		checkBox.type = "checkbox";
 		checkBox.name = "product";
 		checkBox.value = product.name;
+		checkBox.id = "chk" + product.name;
+		checkBox.style.display = "none";
 		checkBoxWrapper.appendChild(checkBox);
+		//Add (Add to Cart) button
+		var addButton = document.createElement("input");
+		addButton.className = "addButton";
+		addButton.type = "button";
+		addButton.value = "Add Item";
+		addButton.name = product.name;
+		addButton.onclick = function () { addButtonPressed(this.name); };
+		addButton.id = "btn" + product.name;
+		checkBoxWrapper.appendChild(addButton);
 		newRow.appendChild(checkBoxWrapper);
 
 		productTable.appendChild(newRow);
@@ -118,6 +131,24 @@ function populateListProductChoices(slct2) {
 		}
 		document.getElementById("restrictions").innerHTML = statusText;
 	}
+}
+
+function addButtonPressed(productID) {
+	//activate hidden checkbox
+	document.getElementById("chk" + productID).click();
+	//change to Remove button
+	document.getElementById("btn" + productID).value = "Remove Item";
+	document.getElementById("btn" + productID).onclick = function () { removeButtonPressed(this.name); };
+	document.getElementById("btn" + productID).style.opacity = 0.75;
+}
+
+function removeButtonPressed(productID) {
+	//activate hidden checkbox
+	document.getElementById("chk" + productID).click();
+	//change to Remove button
+	document.getElementById("btn" + productID).value = "Add Item";
+	document.getElementById("btn" + productID).onclick = function () { addButtonPressed(this.name); };
+	document.getElementById("btn" + productID).style.opacity = 1;
 }
 
 // This function is called when the "Add selected items to cart" button in clicked
@@ -159,6 +190,6 @@ function selectedItems() {
 	c.style = "padding:5px;";
 	c.appendChild(document.createElement("br"))
 	// add paragraph and total price
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price: $" + getTotalPrice(chosenProducts).toFixed(2)));
 
 }
