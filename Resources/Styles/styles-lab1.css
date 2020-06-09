@@ -1,0 +1,118 @@
+﻿body {
+    background-color: #1D1E28;
+    font-family: 'Fira Sans';
+    color: #fefefe;
+}
+
+.titleblock {
+    background-image: url('../Images/bg-header.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-color: #424458;
+    background-position-y:center;
+    width: 99%;
+    height:400px;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 5px 10px 5px;
+}
+
+.titleblock-inner {
+    padding-top:160px;
+}
+
+.titleblock-inner h1 {
+    font-variant:small-caps;
+    font-size:500%;
+    vertical-align:middle;
+}
+
+.titleblock-inner p {
+    font-size:125%;
+}
+
+.main {
+    text-align:center;
+}
+
+.info {
+    display:inline-block;
+}
+
+#sitelink {
+    display: inline-block;
+    padding: 15px;
+    margin: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+    #sitelink > a {
+        text-decoration: none;
+        color: #fefefe;
+        text-size-adjust: 200%;
+    }
+
+div.imgContainer {
+    float: left;
+    align-items: center;
+    width: 400px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #424458;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+    div.imgContainer a img {
+        object-fit: cover;
+        object-position: top;
+        width: 400px;
+        height: 200px;
+    }
+
+.questionnaire {
+    display: inline-block;
+    margin: 40px 20px 20px 20px;
+    padding:10px 50px 10px 50px;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #424458;
+}
+
+.questionTable  tr > :last-child {
+    text-align: left;
+}
+
+.questionTable  tr > :first-child {
+    text-align: right;
+    padding-right:20px;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+#q3, #q1, #q6{
+    margin-left:40px;
+}
+
+textarea {
+    resize:none;
+    width:300px;
+    height:50px;
+}
+
+input.postButton {
+    font-family:'Fira Sans';
+}
+
+footer {
+    text-align: right;
+    color: rgba(254, 254, 254, 0.5);
+    font-size:75%;
+}
