@@ -1,0 +1,46 @@
+﻿/* COLOR THEME: #2E1114 , #501B1D , #64485C , #83677B , #ADADAD */
+
+body {
+    background-color: #64485C;
+}
+
+.header {
+    background-color: #2E1114;
+    height: 400px;
+    color: white;
+}
+.headerLogoBlock { }
+
+.headerContactBlock { text-align: right; }
+
+.bodyWrapper {
+    width:84%;
+    background-color:#FFFFFF;
+    overflow:hidden;
+}
+
+.blurb {
+    background-color: #ADADAD;
+    margin:50px 200px;
+    padding:30px;
+    text-align:center;
+}
+
+.bodyHeader {
+    padding: 5px 0px 10px 10px;
+    margin: 10px 0;
+    height:65px;
+    background-color: #501B1D;
+    color:white;
+    font-size:200%;
+}
+
+.bodyContent {
+    padding: 5px;
+    margin: -10px 0px 0px 0px;
+    background-color: #ADADAD;
+}
+
+.tailer {
+    height:15px;
+}
