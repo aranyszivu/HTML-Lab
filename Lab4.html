@@ -27,7 +27,7 @@
                 <div style="position:absolute; bottom:20px;">
                     <img src="Resources/Images/barberlogo.png" />
                     <div style="position:absolute; bottom:50px; left:200px; width:400px;">
-                        <h1 style="display:inline;">Tom &amp; Jerry's Barbershop</h1>
+                        <h1 style="display:inline; font-family:FiraSans-Bold">Tom &amp; Jerry's Barbershop</h1>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
     <div class="bodyWrapper container-fluid">
         <div class="row blurb">
             <p style="width:100%">
-                <b>Welcome to Tom &amp; Jerry's Barbershop! </b><br />
+                <b>Welcome to Tom &amp; Jerry's Barbershop! </b><br /><br />
                 <i>We've been providing haircuts for the folks in Shilo, Manitoba for over 50 years! Come on down and leave looking like a million bucks!</i>
             </p>
         </div>
@@ -53,19 +53,114 @@
             <p>Our Staff</p>
         </div>
         <div class="row bodyContent">
-            <p>Our Staff Content</p>
+            <div class="container-fluid">
+                <div class="row" style="height:100%">
+                    <div class="col-sm-0 col-md-1 paddingAbout"><!--Side Padding--> </div>
+                    <div class="col-sm 12 col-md-5">
+                        <img src="Resources/Images/tom.png" />
+                        <h3>Tom</h3>
+                        <p>Don't let the chrome dome fool you, he's a master of his craft!</p>
+                    </div>
+                    <div class="col-sm 12 col-md-5">
+                        <img src="Resources/Images/jerry.png" />
+                        <div style="display:inline; width:100px;">
+                            <h3>Jerry</h3>
+                            <p>Heart of gold, and steady hands like a watchmaker.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-0 col-md-1 paddingAbout"><!--Side Padding--> </div>
+                </div>
+            </div>
         </div>
         <div class="row bodyHeader">
             <p>Pricing</p>
         </div>
         <div class="row bodyContent">
-            <p>Prices Content</p>
+            <div class="container-fluid">
+                <div class="row" style="height:100%">
+                    <div class="col-sm 12 col-md-6">
+                        <table class="table">
+                            <tr>
+                                <td>Men's Cut</td>
+                                <td class="price">$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Men's Buzz Cut</td>
+                                <td class="price">$5.00</td>
+                            </tr>
+                            <tr>
+                                <td>Men's Fade</td>
+                                <td class="price">$25.00</td>
+                            </tr>
+                            <tr>
+                                <td>Shave</td>
+                                <td class="price">$8.50</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm 12 col-md-6">
+                        <table class="table">
+                            <tr>
+                                <td>Women's Long Cut</td>
+                                <td class="price">$25.00</td>
+                            </tr>
+                            <tr>
+                                <td>Women's Short Cut</td>
+                                <td class="price">$20.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dye Job</td>
+                                <td class="price">$10.00</td>
+                            </tr>
+                            <tr>
+                                <td>Women's Shave</td>
+                                <td class="price">Free</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row bodyHeader">
-            <p>Booking an Appointment</p>
+            <p>Book an Appointment</p>
         </div>
         <div class="row bodyContent">
-            <p>Booking Content</p>
+            <form name="appointment" style="width:100%; height:100%; margin:10px">
+                <div class="container-fluid">
+                    <div class="row" style="height:100%">
+                        <div class="col-sm 12 col-md-6 bdyLeft chkBoxes">
+                            <input type="checkbox" class="form-check-input" id="chkMenLong" value="menLong" />
+                            <label for="chkMenLong" class="label">Men's Long Cut</label> <br />
+                            <input type="checkbox" class="form-check-input" id="chkMenShort" value="menShort" />
+                            <label for="chkMenShort" class="label">Men's Buzz Cut</label> <br />
+                            <input type="checkbox" class="form-check-input" id="chkMenFade" value="menFade" />
+                            <label for="chkMenFade" class="label">Men's Fade</label> <br />
+                            <input type="checkbox" class="form-check-input" id="chkMenShave" value="menShave" />
+                            <label for="chkMenShave" class="label">Men's Shave</label> <br />
+                            <input type="checkbox" class="form-check-input" id="chkWomenLong" value="womenLong" />
+                            <label for="chkWomenLong" class="label">Women's Long Cut</label> <br />
+                            <input type="checkbox" class="form-check-input" id="chkWomenShort" value="womenShort" />
+                            <label for="chkWomenShort" class="label">Women's Short Cut</label> <br />
+                            <input type="checkbox" class="form-check-input" id="chkWomensDye" value="womenDye" />
+                            <label for="chkWomensDye" class="label">Dye Job</label> <br />
+                            <input type="checkbox" class="form-check-input" id="chkWomenShave" value="womenShave" />
+                            <label for="chkWomenShave" class="label">Men's Long Cut</label> <br />
+                        </div>
+                        <div class="col-sm 12 col-md-6 bdyRight">
+                            <label for="dtAppointment" class="input">Appointment Date:</label>
+                            <input type="datetime-local" id="dtAppointment" /> <br />
+                            <label for="txtName" class="input">Name:</label>
+                            <input type="text" id="txtName" /> <br />
+                            <label for="telPhone" class="input">Phone #:</label>
+                            <input type="tel" id="telPhone" /> <br />
+                            <label for="emlAddress" class="input">Email Address:</label>
+                            <input type="email" id="emlAddress" /> <br /><br />
+                            <input type="button" class="btn btn-outline-secondary" name="btnBook" id="btnBook" value="Book Appointment"/>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="row tailer"></div>
     </div>
