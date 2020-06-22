@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Lab 4 - Service Website</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!-- Required for optimal mobile device compatibility -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery UI CDN -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<!-- Custom CSS and Scripts -->
+	<link rel="stylesheet" href="Resources/Styles/style-lab4.css" />
+	<script src="Resources/Scripts/lab5-scripts.js"></script>
+
+</head>
+<body>
+	<div class="header container-fluid">
+		<div class="row" style="height:100%">
+			<div class="col-sm-0 col-md-1">
+			</div>
+			<div class="col-sm 12 col-md-5 headerLogoBlock">
+				<div style="position:absolute; bottom:20px;">
+					<img src="Resources/Images/barberlogo.png" />
+					<div style="position:absolute; bottom:50px; left:200px; width:400px;">
+						<h1 style="display:inline; font-family:FiraSans-Bold">Tom &amp; Jerry's Barbershop</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm 12 col-md-5 headerContactBlock">
+				<div style="position:absolute; bottom:20px; right:10px; text-align:right;">
+					<img src="Resources/Images/location.png" style="width:50%; height:auto; margin:30px 0px" />
+					<p><i>1983 Medina Crescent, Shilo, Manitoba, R0K 2A1</i></p>
+					<a href="https://seashanties.ytmnd.com/">tomandjerrys@compuserve.com</a>
+				</div>
+			</div>
+			<div class="col-sm-0 col-md-1">
+			</div>
+		</div>
+	</div>
+	<div class="navbar-collapse">
+		<nav class="navbar navbar-expand-md" style="background-color: #501B1D">
+			<div class="collapse navbar-collapse" id="collapsibleNavbar" style="padding:5px 0px 0px 150px">
+				<ul class="navbar-nav">
+					<li>
+						<a class="navLink" href="#showcaseStaff">
+							<img src="https://img.icons8.com/wired/64/000000/guest-male.png" style="filter:invert(100%); width:30px;">
+							STAFF
+						</a>
+					</li>
+					<li>
+						<a class="navLink" href="#showcaseService">
+							<img src="https://img.icons8.com/windows/64/000000/scissors.png" style="filter:invert(100%); width:30px;">
+							SERVICES
+						</a>
+					</li>
+					<li>
+						<a class="navLink" href="#showcaseAppointment">
+							<img src="https://img.icons8.com/ios/64/000000/ticket.png" style="filter:invert(100%); width:30px;">
+							APPOINTMENTS
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="bodyWrapper container-fluid" >
+		<div class="row blurb">
+			<p style="width:100%">
+				<b>Welcome to Tom &amp; Jerry's Barbershop! </b><br /><br />
+				<i>We've been providing haircuts for the folks in Shilo, Manitoba for over 50 years! Come on down and leave looking like a million bucks!</i>
+			</p>
+		</div>
+		<div class="row bodyHeader" id="showcaseStaff">
+			<p>
+				<img src="https://img.icons8.com/wired/64/000000/guest-male.png" style="filter:invert(100%); width:50px" />
+				Our Staff
+			</p>
+		</div>
+		<div class="row bodyContent" >
+			<div class="container-fluid">
+				<div class="row" style="height:100%; padding:20px 0px;">
+					<div class="col-sm-0 col-md-1 paddingAbout"><!--Side Padding--> </div>
+					<div class="col-sm 12 col-md-5">
+						<img src="Resources/Images/tom.png" />
+						<div style="float:right; width:380px;">
+							<h3>Tom</h3>
+							<p>Don't let the chrome dome fool you, he's a master of his craft!</p>
+						</div>
+					</div>
+					<div class="col-sm 12 col-md-5">
+						<img src="Resources/Images/jerry.png" style="display:inline" />
+						<div style="float:right">
+							<h3>Jerry</h3>
+							<p>Heart of gold, and steady hands like a watchmaker.</p>
+						</div>
+					</div>
+					<div class="col-sm-0 col-md-1 paddingAbout"><!--Side Padding--> </div>
+				</div>
+			</div>
+		</div>
+		<div class="row bodyHeader" id="showcaseService">
+			<p>
+				<img src="https://img.icons8.com/windows/64/000000/scissors.png" style="filter:invert(100%); width:50px" />
+				Services
+			</p>
+		</div>
+		<div class="row bodyContent">
+			<div class="container-fluid">
+				<div class="row" style="height:100%">
+					<div class="col-sm 12 col-md-6" style="padding-top:10px;">
+						<table class="table">
+							<thead style="padding:5px;">
+								<tr>
+									<th colspan="3" style="text-align:center; font-weight:bold; font-size:150%">
+										<img src="https://img.icons8.com/wired/64/000000/user-male.png" />
+										Men's Cuts
+									</th>
+								</tr>
+							</thead>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Cut &amp; Style</td>
+								<td class="price">$15.00</td>
+							</tr>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Buzz Cut</td>
+								<td class="price">$5.00</td>
+							</tr>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Fade</td>
+								<td class="price">$25.00</td>
+							</tr>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Shave</td>
+								<td class="price">$8.50</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-sm 12 col-md-6" style="padding-top:10px;">
+						<table class="table">
+							<thead style="padding:5px;">
+								<tr>
+									<th colspan="3" style="text-align:center; font-weight:bold; font-size:150%">
+										<img src="https://img.icons8.com/wired/64/000000/user-female.png" />
+										Women's Cuts
+									</th>
+								</tr>
+							</thead>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Long Cut</td>
+								<td class="price">$25.00</td>
+							</tr>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Short Cut</td>
+								<td class="price">$20.00</td>
+							</tr>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Dye Job</td>
+								<td class="price">$10.00</td>
+							</tr>
+							<tr>
+								<td><img src="Resources/Images/hairstyle_placeholder.png" style="width:85px; height:auto" /></td>
+								<td>Shave</td>
+								<td class="price">Free</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row bodyHeader" id="showcaseAppointment">
+			<p>
+				<img src="https://img.icons8.com/ios/64/000000/ticket.png" style="filter:invert(100%); width:50px"/>
+				Book an Appointment
+			</p>
+		</div>
+		<div class="row bodyContent">
+			<form name="appointment" style="width:100%; height:100%; margin:10px">
+				<div class="container-fluid">
+					<div class="row" style="height:100%">
+						<div class="col-sm 12 col-md-6 bdyLeft chkBoxes">
+							<h5>
+								<img src="https://img.icons8.com/wired/64/000000/user-male.png" />
+								Men's Cuts
+							</h5>
+							<input type="checkbox" class="form-check-input" id="chkMenLong" value="menLong" />
+							<label for="chkMenLong" class="label">Men's Long Cut</label> <br />
+							<input type="checkbox" class="form-check-input" id="chkMenShort" value="menShort" />
+							<label for="chkMenShort" class="label">Men's Buzz Cut</label> <br />
+							<input type="checkbox" class="form-check-input" id="chkMenFade" value="menFade" />
+							<label for="chkMenFade" class="label">Men's Fade</label> <br />
+							<input type="checkbox" class="form-check-input" id="chkMenShave" value="menShave" />
+							<label for="chkMenShave" class="label">Men's Shave</label> <br />
+							<h5>
+								<img src="https://img.icons8.com/wired/64/000000/user-female.png" />
+								Women's Cuts
+							</h5>
+							<input type="checkbox" class="form-check-input" id="chkWomenLong" value="womenLong" />
+							<label for="chkWomenLong" class="label">Women's Long Cut</label> <br />
+							<input type="checkbox" class="form-check-input" id="chkWomenShort" value="womenShort" />
+							<label for="chkWomenShort" class="label">Women's Short Cut</label> <br />
+							<input type="checkbox" class="form-check-input" id="chkWomensDye" value="womenDye" />
+							<label for="chkWomensDye" class="label">Dye Job</label> <br />
+							<input type="checkbox" class="form-check-input" id="chkWomenShave" value="womenShave" />
+							<label for="chkWomenShave" class="label">Men's Long Cut</label> <br />
+						</div>
+						<div class="col-sm 12 col-md-6 bdyRight">
+							<h4 style="padding-bottom:5px">
+								<img src="https://img.icons8.com/wired/64/000000/calendar.png" />
+								Appointment Details
+							</h4>
+							<label for="ddlBarber" class="input">Barber:</label>
+							<select id="ddlBarber" style="width:100px">
+								<option value="tom">Tom</option>
+								<option value="jerry">Jerry</option>
+							</select> <br />
+							<label for="datePicker" class="input" data-toggle="tooltip" title="Please note that availability will &#10; depend on your selected barber.">Appointment Date:</label>
+							<input type="text" id="datePicker" />
+
+							<h4 style="padding: 10px 0px 5px 0px">
+								<img src="https://img.icons8.com/wired/64/000000/phone.png" />
+								Contact Info
+							</h4>
+							<label for="txtName" class="input" data-toggle="tooltip" title="Choose how we'll refer to you.">Name:</label>
+							<input type="text" id="txtName" /> <br />
+							<label for="telPhone" class="input" data-toggle="tooltip" title="The number you'd like to be reached at." >Phone #:</label>
+							<input type="text" id="telPhone"/> <br />
+							<label for="emlAddress" class="input" data-toggle="tooltip" title="We'll send you a confirmation notice, and any updates if you can't be reached by phone." >Email Address:</label>
+							<input type="text" id="emlAddress" /> <br />
+
+							<h4 style="padding: 10px 0px 5px 0px">
+								<img src="https://img.icons8.com/wired/64/000000/cheap-2.png" />
+								Payment Info
+							</h4>
+							<p style="opacity:0.75; font-size:75%"><i>In the event of a cancellation, a $10 fee will be charged</i></p>
+							<label for="numCredit" class="input" >Credit/Debit Card #:</label>
+							<input type="text" id="numCredit" /> <br />
+							<label for="numCVC" class="input">
+								CVC
+								<span class="helpText" data-toggle="tooltip" title="The security code of the card, typically 3 digits on the back">(?)</span>
+								:
+							</label>
+							<input type="text" id="numCVC" /> <br />
+
+
+
+						</div>
+					</div>
+					<div style="text-align:center; padding:20px 0px">
+						<input type="button" class="btn btn-outline-secondary" name="btnBook" id="btnBook" value="Book Appointment" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="container-fluid" style="text-align:center; padding:10px 0px;">
+			<a href="https://icons8.com/icons/wired">Icons by Icons8</a>
+		</div>
+		<div class="row tailer"></div>
+	</div>
+</body>
+</html>
